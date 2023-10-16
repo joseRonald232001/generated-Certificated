@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 
 const AllUsers = () => {
   const [data, setData] = useState([]);
@@ -18,9 +17,9 @@ const AllUsers = () => {
           <table className="m-auto">
             <thead>
               <tr>
-                <th class="px-4 py-2">Nombre</th>
-                <th class="px-4 py-2">Apellido</th>
-                <th class="px-4 py-2">Email</th>
+                <th className="px-4 py-2">Nombre</th>
+                <th className="px-4 py-2">Apellido</th>
+                <th className="px-4 py-2">Email</th>
               </tr>
             </thead>
             {data.map((user) => (
@@ -33,15 +32,6 @@ const AllUsers = () => {
               </tbody>
             ))}
           </table>
-
-          <div className="w-96 text-center m-auto my-3">
-            <Link to={"/"}>
-              <button className="buttonAll mx-2 ">registrar</button>
-            </Link>
-            <Link to={"/certificados"}>
-              <button className="buttonAll ">certificados</button>
-            </Link>
-          </div>
         </div>
       </div>
     </>
